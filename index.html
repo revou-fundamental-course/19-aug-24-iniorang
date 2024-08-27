@@ -66,7 +66,7 @@
         </ul>
     </nav>
     <main>
-        <section class="container">
+        <section class="container" id="main">
             <div class="message">
                 <header>
                     <h1>Halo User, Selamat Datang di Website Ku</h1>
@@ -77,31 +77,60 @@
                 <img src="https://picsum.photos/id/1/1366/578">
             </div>
         </section>
-        <section class="facility-container">
+        <section class="facility-container" id="facility">
             <header>
-                <h1>Fasilitas Kita</h1>
+                <h1>Fasilitas</h1>
             </header>
-            <div class="facility-list">
+            <div class="facility-row">
                 <div><img
                         src="https://images.pexels.com/photos/356065/pexels-photo-356065.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
-                        <h1>lorem Ipsum</h1>
+                    <h1>Kelas Ber-AC</h1>
                 </div>
                 <div><img
                         src="https://images.pexels.com/photos/356065/pexels-photo-356065.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
-                        <h1>lorem Ipsum</h1>
+                    <h1>Perpustakaan</h1>
                 </div>
                 <div><img
                         src="https://images.pexels.com/photos/356065/pexels-photo-356065.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
-                        <h1>lorem Ipsum</h1>
+                    <h1>Kantin</h1>
                 </div>
                 <div><img
                         src="https://images.pexels.com/photos/356065/pexels-photo-356065.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
-                        <h1>lorem Ipsum</h1>
+                    <h1>Lapangan</h1>
                 </div>
             </div>
         </section>
-        <section class="container">
-            <h1>Hubungi Kami</h1>
+        <section class="container" id="contact">
+            <header>
+                <h1>Hubungi Kami</h1>
+            </header>
+            <div class="contact-row">
+                <form id="" onclick="">
+                    <div class="form-group">
+                        <label for="nama">Nama :</label>
+                        <input type="text" name="nama" placeholder="Nama Lengkap">
+                    </div>
+                    <div class="form-group">
+                        <label for="lahir">Tanggal Lahir :</label>
+                        <input type="date" name="lahir">
+                    </div>
+                    <div class="form-group">
+                        <label for="jkel">Jenis Kelamin :</label>
+                        <div class="">
+                            <input type="radio" id="laki-laki" name="jkel" value="laki-laki">
+                            <label for="laki-laki">Laki-laki</label>
+                            <input type="radio" id="perempuan" name="jkel" value="perempuan">
+                            <label for="perempuan">Perempuan</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="pesan">Pesan:</label>
+                        <textarea name="pesan" placeholder="Pesan"></textarea>
+                    </div>
+                    <button type="submit">Kirim Pesan</button>
+                </form>
+                <textarea name="result"></textarea>
+            </div>
         </section>
     </main>
     <footer>

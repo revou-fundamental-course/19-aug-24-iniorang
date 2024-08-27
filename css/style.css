@@ -8,6 +8,10 @@ html {
     font-style: normal;
 }
 
+* {
+    font-weight: 400;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -15,13 +19,21 @@ body {
 }
 
 h1 {
-    font-size: 3em;
-    font-weight: 500;
+    font-size: 2.027rem;
+    font-weight: 700;
 }
 
 h2 {
-    font-size: 2em;
-    font-weight: 300;
+    font-size: 1.802rem;
+    font-weight: 400;
+}
+
+input[type="text"],input[type="date"] {
+    height: 2em;
+}
+
+textarea{
+    resize: vertical;
 }
 
 /* Navigation */
@@ -76,13 +88,10 @@ nav ul li a {
 .facility-container {
     padding: 30px 85px;
     background: rgb(255, 109, 25);
-}
-
-.facility-bg h1 {
     color: white;
 }
 
-.facility-list {
+.facility-row {
     display: grid;
     align-content: center;
     grid-template-columns: auto auto auto auto;
@@ -90,21 +99,37 @@ nav ul li a {
     padding: 10px;
 }
 
-.facility-list>div {
-    
+.facility-row>div {
     text-align: center;
     padding: 20px 0;
     font-size: 30px;
 }
 
-.facility-list img{
+.facility-row img {
     border-radius: 50%;
     width: 200px;
     height: 200px;
 }
-/* End of Facility */
 
+/* End of Facility */
+/* Contact */
+.contact-row {
+    display: grid;
+    align-content: center;
+    grid-template-columns: auto auto;
+    gap: 15%;
+    /* padding: 10px; */
+}
+
+.form-group{
+    display: grid;
+    align-content: center;
+    grid-template-columns: 25% auto;
+    margin-bottom: 30px;
+}
+/* End of Contact */
 /* End of Body */
+
 /* Footer */
 footer {
     padding: 1rem 10rem;
