@@ -13,7 +13,7 @@
 <body>
     <nav>
         <div id="company-logo">
-            <a href="#">
+            <a href="index.html">
                 <svg width="50%" height="20%" viewBox="0 0 780 200" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g clip-path="url(#clip0_1113_5132)">
                         <g clip-path="url(#clip1_1113_5132)">
@@ -55,12 +55,11 @@
                         </clipPath>
                     </defs>
                 </svg>
-
             </a>
         </div>
         <ul>
-            <li><a href="#">Beranda</a></li>
-            <li><a href="#">Profil</a></li>
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="profile.html">Profil</a></li>
             <li><a href="#">Pencapaian</a></li>
             <li><a href="#">Kontak</a></li>
         </ul>
@@ -69,7 +68,7 @@
         <section class="container" id="main">
             <div class="message">
                 <header>
-                    <h1>Halo User, Selamat Datang di Website Ku</h1>
+                    <h1 id="pesan">Halo User, Selamat datang di websiteku</h1>
                     <h2>Ini adalah Website Pertamaku</h1>
                 </header>
             </div>
@@ -87,15 +86,15 @@
                     <h1>Kelas Ber-AC</h1>
                 </div>
                 <div><img
-                        src="https://images.pexels.com/photos/356065/pexels-photo-356065.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                        src="https://images.pexels.com/photos/3646172/pexels-photo-3646172.jpeg">
                     <h1>Perpustakaan</h1>
                 </div>
                 <div><img
-                        src="https://images.pexels.com/photos/356065/pexels-photo-356065.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                        src="https://images.unsplash.com/photo-1552058461-dc1828d58bf6?q=80&w=2067&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
                     <h1>Kantin</h1>
                 </div>
                 <div><img
-                        src="https://images.pexels.com/photos/356065/pexels-photo-356065.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                        src="https://images.pexels.com/photos/2277980/pexels-photo-2277980.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
                     <h1>Lapangan</h1>
                 </div>
             </div>
@@ -107,16 +106,16 @@
             <div class="contact-row">
                 <form id="" onclick="">
                     <div class="form-group">
-                        <label for="nama">Nama :</label>
-                        <input type="text" name="nama" placeholder="Nama Lengkap">
+                        <label for="nama">Nama</label>
+                        <input type="text" name="nama" placeholder="Nama">
                     </div>
                     <div class="form-group">
-                        <label for="lahir">Tanggal Lahir :</label>
+                        <label for="lahir">Tanggal Lahir</label>
                         <input type="date" name="lahir">
                     </div>
                     <div class="form-group">
-                        <label for="jkel">Jenis Kelamin :</label>
-                        <div class="">
+                        <label for="jkel">Jenis Kelamin</label>
+                        <div>
                             <input type="radio" id="laki-laki" name="jkel" value="laki-laki">
                             <label for="laki-laki">Laki-laki</label>
                             <input type="radio" id="perempuan" name="jkel" value="perempuan">
@@ -124,12 +123,12 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="pesan">Pesan:</label>
+                        <label for="pesan">Pesan</label>
                         <textarea name="pesan" placeholder="Pesan"></textarea>
                     </div>
-                    <button type="submit">Kirim Pesan</button>
+                    <button class="button-1" style="float: right;" type="submit">Kirim Pesan</button>
                 </form>
-                <textarea name="result"></textarea>
+                <textarea readonly name="result"></textarea>
             </div>
         </section>
     </main>
@@ -138,5 +137,4 @@
     </footer>
     <script src="js/script.js"></script>
 </body>
-
 </html>

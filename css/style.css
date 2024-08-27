@@ -28,12 +28,23 @@ h2 {
     font-weight: 400;
 }
 
-input[type="text"],input[type="date"] {
-    height: 2em;
+input, textarea{
+    padding: 9.5px 20PX;
+    border: 0px;
+    border-radius: 15px;
+    resize: vertical;
+    font-size: 18px;
 }
 
-textarea{
-    resize: vertical;
+
+.button-1{
+    padding: 1em 5rem;
+    background-color: rgb(255, 109, 25);
+    color: white;
+    border-radius: 15px;
+    border: 0px;
+    font-size: large;
+    text-decoration: none;
 }
 
 /* Navigation */
@@ -72,11 +83,11 @@ nav ul li a {
 /* Message */
 .container {
     padding: 30px 85px;
+    margin: 30px 0px;
 }
 
 .message {
-    height: max-content;
-    line-height: 1.1em;
+    line-height: 1em;
 }
 
 .main-img {
@@ -117,8 +128,8 @@ nav ul li a {
     display: grid;
     align-content: center;
     grid-template-columns: auto auto;
-    gap: 15%;
-    /* padding: 10px; */
+    gap: 10%;
+    padding: 0px 30px;
 }
 
 .form-group{
@@ -126,6 +137,11 @@ nav ul li a {
     align-content: center;
     grid-template-columns: 25% auto;
     margin-bottom: 30px;
+}
+
+.form-group label {
+    font-size: larger;
+    font-weight: 400;
 }
 /* End of Contact */
 /* End of Body */
