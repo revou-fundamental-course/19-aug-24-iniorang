@@ -19,16 +19,22 @@ body {
 }
 
 h1 {
-    font-size: 2.027rem;
+    font-size: 2.5rem;
     font-weight: 700;
 }
 
 h2 {
-    font-size: 1.802rem;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+h3 {
+    font-size: 1.8rem;
     font-weight: 400;
 }
 
-input, textarea{
+input,
+textarea {
     padding: 9.5px 20PX;
     border: 0px;
     border-radius: 15px;
@@ -36,8 +42,7 @@ input, textarea{
     font-size: 18px;
 }
 
-
-.button-1{
+.button-1 {
     padding: 1em 5rem;
     background-color: rgb(255, 109, 25);
     color: white;
@@ -46,6 +51,28 @@ input, textarea{
     font-size: large;
     cursor: pointer;
     text-decoration: none;
+}
+
+.right {
+    float: right;
+}
+
+@media(max-width: 768px) {
+    header {
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1rem;
+    }
+
+    .button-1 {
+        width: 100%;
+    }
 }
 
 /* Navigation */
@@ -60,6 +87,7 @@ nav {
     background: rgb(255, 109, 25);
     justify-content: space-between;
     display: flex;
+    align-items: center;
 }
 
 nav ul {
@@ -67,6 +95,8 @@ nav ul {
     align-items: center;
     justify-content: flex-end;
     gap: 3rem;
+    margin: 0;
+    padding: 0;
 }
 
 nav ul li {
@@ -80,20 +110,80 @@ nav ul li a {
     font-weight: 400;
 }
 
-/* Body Main */
-/* Message */
+@media screen and (max-width: 768px) {
+    nav{
+        flex-direction: column;
+        align-items: center;
+    }
+    #company-logo {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 1rem;
+    }
+
+    #company-logo a svg {
+        width: 100%;
+        height: auto;
+    }
+    nav ul{
+        gap: 1rem;
+    }
+    nav ul li a {
+        font-size: medium;
+    }
+}
+
+/* End of Nav */
+
 .container {
     padding: 30px 85px;
-    margin: 30px 0px;
+    z-index: 2;
 }
 
-.message {
-    line-height: 1em;
+#main {
+    position: relative;
 }
 
-.main-img {
-    margin: 3em 0px;
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 0px;
+    }
+}
+
+/* Body Main */
+/* Hero */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 768px;
+    overflow: hidden;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
+}
+
+.hero::before {
+    content: "";
+    background-image: url(https://images.pexels.com/photos/60626/pexels-photo-60626.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: grayscale(50%) blur(10px) contrast(80%);
+    z-index: 1;
+}
+
+@media screen and (max-width: 768px) {
+    .hero {
+        height: 100dvh;
+    }
 }
 
 /* Facility */
@@ -104,9 +194,9 @@ nav ul li a {
 }
 
 .facility-row {
-    display: grid;
-    align-content: center;
-    grid-template-columns: auto auto auto auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
     gap: 10px;
     padding: 10px;
 }
@@ -123,6 +213,17 @@ nav ul li a {
     height: 200px;
 }
 
+@media screen and (max-width: 768px) {
+    .facility-row {
+        display: inline;
+    }
+
+    .facility-row img {
+        width: 150px;
+        height: 150px;
+    }
+}
+
 /* End of Facility */
 /* Contact */
 .contact-row {
@@ -133,7 +234,7 @@ nav ul li a {
     padding: 0px 30px;
 }
 
-.form-group{
+.form-group {
     display: grid;
     align-content: center;
     grid-template-columns: 25% auto;
@@ -144,6 +245,59 @@ nav ul li a {
     font-size: larger;
     font-weight: 400;
 }
+
+#label-gender {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.contact-row > #hasil {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box; 
+    padding: 10px;
+    resize: none; 
+}
+
+@media screen and (max-width: 768px) {
+    .contact-row {
+        grid-template-columns: auto;
+        gap: 20px;
+    }
+
+    .form-group {
+        grid-template-columns: 100%;
+        margin-bottom: 30px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .form-group label {
+        margin-bottom: 5px;
+    }
+
+    #label-gender {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .contact-row>textarea {
+        width: 100%;
+        height: 10dvh;
+    }
+
+    .contact-row > #hasil {
+        width: 100%; /* Make the result textarea full width */
+        height: 150px; /* Set a reasonable height for mobile */
+    }
+}
+
 /* End of Contact */
 /* End of Body */
 
