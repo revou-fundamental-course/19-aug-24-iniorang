@@ -19,18 +19,23 @@ body {
 }
 
 h1 {
-    font-size: 2.5rem;
+    font-size: 3rem;
     font-weight: 700;
 }
 
 h2 {
     font-size: 2rem;
-    font-weight: 700;
+    font-weight: 300;
 }
 
 h3 {
     font-size: 1.8rem;
     font-weight: 400;
+}
+
+p{
+    font-size: 1.6rem;
+    font-weight: 300;
 }
 
 input,
@@ -53,9 +58,16 @@ textarea {
     text-decoration: none;
 }
 
+/* Paksa Posisi */
 .right {
     float: right;
 }
+
+.left {
+    float: left;
+}
+
+
 
 @media(max-width: 768px) {
     header {
@@ -67,7 +79,7 @@ textarea {
     }
 
     h2 {
-        font-size: 1rem;
+        font-size: 1.5rem;
     }
 
     .button-1 {
@@ -75,7 +87,7 @@ textarea {
     }
 }
 
-/* Navigation */
+/* Navigation bar */
 
 #company-logo {
     width: max-content;
@@ -110,11 +122,17 @@ nav ul li a {
     font-weight: 400;
 }
 
+nav ul li a .active {
+    background: rgb(184, 80, 20);
+    color: black;
+}
+
 @media screen and (max-width: 768px) {
-    nav{
+    nav {
         flex-direction: column;
         align-items: center;
     }
+
     #company-logo {
         width: 100%;
         display: flex;
@@ -126,9 +144,11 @@ nav ul li a {
         width: 100%;
         height: auto;
     }
-    nav ul{
+
+    nav ul {
         gap: 1rem;
     }
+
     nav ul li a {
         font-size: medium;
     }
@@ -138,93 +158,198 @@ nav ul li a {
 
 .container {
     padding: 30px 85px;
-    z-index: 2;
-}
-
-#main {
-    position: relative;
+    margin-bottom: 40px;
 }
 
 @media screen and (max-width: 768px) {
     .container {
-        padding: 0px;
+        padding: 5px;
     }
 }
 
 /* Body Main */
-/* Hero */
-.hero {
+
+/* Slideshow */
+
+.mySlides {
+    display: none
+}
+
+.mySlides img {
+    width: 100%;
+    height: auto;
+    max-width: 1368px;
+    max-height: 768px;
+}
+
+.slideshow-container {
+    max-width: 1368px;
+    max-height: 768px;
     position: relative;
-    width: 100%;
-    height: 768px;
-    overflow: hidden;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+    margin: auto;
 }
 
-.hero::before {
-    content: "";
-    background-image: url(https://images.pexels.com/photos/60626/pexels-photo-60626.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+.prev,
+.next {
+    cursor: pointer;
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    filter: grayscale(50%) blur(10px) contrast(80%);
-    z-index: 1;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
 }
 
-@media screen and (max-width: 768px) {
-    .hero {
-        height: 100dvh;
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+@media only screen and (max-width: 300px) {
+
+    .prev,
+    .next,
+    .text {
+        font-size: 11px
+    }
+
+    .mySlides img {
+        width: 100%;
     }
 }
 
-/* Facility */
-.facility-container {
+/* End of Slideshow */
+/* tool */
+.tool-container {
     padding: 30px 85px;
     background: rgb(255, 109, 25);
     color: white;
 }
 
-.facility-row {
+.tool-container h1,p {
+    text-align: center;
+}
+
+.tool-row {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    gap: 10px;
+    gap: 5px;
     padding: 10px;
 }
 
-.facility-row>div {
+.tool-row>div {
     text-align: center;
     padding: 20px 0;
     font-size: 30px;
 }
 
-.facility-row img {
+.tool-row img {
     border-radius: 50%;
-    width: 200px;
-    height: 200px;
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    padding: 15px;
 }
 
 @media screen and (max-width: 768px) {
-    .facility-row {
+    .tool-row {
         display: inline;
     }
 
-    .facility-row img {
+    .tool-row img {
         width: 150px;
         height: 150px;
     }
 }
 
-/* End of Facility */
+/* End of tool */
+/* Achivement */
+.achievement-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 50px;
+    grid-template-areas:
+        "image-1 text-1"
+        "text-2 image-2";
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+.image-1, .image-2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-1 {
+    grid-area: image-1;
+}
+
+.image-2 {
+    grid-area: image-2;
+}
+
+
+.text-1, .text-2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: rgb(255, 109, 25);
+    color: white;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.text-1 {
+    grid-area: text-1;
+}
+
+.text-2 {
+    grid-area: text-2;
+}
+
+.achievement-container img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+
+@media only screen and (max-width: 768px) {
+    .achievement-container {
+        grid-template-columns: 1fr; 
+        grid-template-areas:
+            "image-1"
+            "text-1"
+            "image-2"
+            "text-2";
+        gap: 30px; 
+    }
+    
+    .text-1, .text-2 {
+        text-align: center; 
+        padding: 15px; 
+    }
+
+}
+
+/* End of Achivement */
 /* Contact */
 .contact-row {
     display: grid;
@@ -252,12 +377,12 @@ nav ul li a {
     gap: 10px;
 }
 
-.contact-row > #hasil {
+.contact-row>#hasil {
     width: 100%;
     height: 100%;
-    box-sizing: border-box; 
+    box-sizing: border-box;
     padding: 10px;
-    resize: none; 
+    resize: none;
 }
 
 @media screen and (max-width: 768px) {
@@ -292,9 +417,11 @@ nav ul li a {
         height: 10dvh;
     }
 
-    .contact-row > #hasil {
-        width: 100%; /* Make the result textarea full width */
-        height: 150px; /* Set a reasonable height for mobile */
+    .contact-row>#hasil {
+        width: 100%;
+        /* Make the result textarea full width */
+        height: 150px;
+        /* Set a reasonable height for mobile */
     }
 }
 
