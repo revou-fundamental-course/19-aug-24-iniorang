@@ -229,33 +229,34 @@ nav ul li a .active {
 }
 
 /* End of Slideshow */
-/* tool */
-.tool-container {
+/* iam */
+.iam-container {
+    margin: 0px;
     padding: 30px 85px;
     background: rgb(255, 109, 25);
     color: white;
+
 }
 
-.tool-container h1,p {
+.iam-container h1,p {
     text-align: center;
 }
 
-.tool-row {
+.iam-row {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-evenly;
     gap: 5px;
     padding: 10px;
 }
 
-.tool-row>div {
+.iam-row>div {
     text-align: center;
-    padding: 20px 0;
     font-size: 30px;
 }
 
-.tool-row img {
-    border-radius: 50%;
+.iam-row img {
+    border-radius: 10%;
     width: 100px;
     height: 100px;
     background-color: white;
@@ -263,17 +264,17 @@ nav ul li a .active {
 }
 
 @media screen and (max-width: 768px) {
-    .tool-row {
+    .iam-row {
         display: inline;
     }
 
-    .tool-row img {
+    .iam-row img {
         width: 150px;
         height: 150px;
     }
 }
 
-/* End of tool */
+/* End of iam */
 /* Achivement */
 .achievement-container {
     display: grid;
